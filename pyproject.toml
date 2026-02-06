@@ -5,11 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "click>=8.3.1",
+    "decord>=0.6.0",
     "einops>=0.8.2",
+    "gdal>=3.12.1",
     "huggingface-hub>=0.36.1",
     "matplotlib>=3.10.8",
     "opencv-python>=4.8,<4.10",
     "pillow>=12.1.0",
+    "pycocotools>=2.0.11",
+    "rasterio>=1.4.4",
     "sam3",
     "torch>=2.10.0",
     "torchvision>=0.25.0",
@@ -25,6 +30,8 @@ build-backend = "hatchling.build"
 
 [tool.uv]
 dev-dependencies = [
+    "jupyter>=1.1.1",
+    "mypy>=1.19.1",
     "pytest>=9.0.2",
     "ruff>=0.15.0",
 ]

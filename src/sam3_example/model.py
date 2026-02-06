@@ -8,17 +8,18 @@ from __future__ import annotations
 
 import torch
 
+from transformers import Sam2Processor, Sam2Model
+
+
 # SAM3は環境に応じて動的にインポート
 _SAM3_AVAILABLE = False
 try:
     from sam3 import build_sam3_image_model
     from sam3.model.sam3_image_processor import Sam3Processor
+
     _SAM3_AVAILABLE = True
 except ImportError:
     pass
-
-# SAM2 (transformers)
-from transformers import Sam2Processor, Sam2Model
 
 
 def get_device() -> torch.device:
